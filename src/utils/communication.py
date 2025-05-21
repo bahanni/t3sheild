@@ -1,7 +1,6 @@
 from PyQt5.QtCore import QThread, pyqtSignal
 import socketio
 import json
-import time
 
 class SocketIOWorker(QThread):
     mobility_analyse_s = pyqtSignal(str)

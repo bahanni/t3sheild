@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\login.ui'
+# Form implementation generated from reading ui file 'login.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.11
 #
@@ -52,7 +52,7 @@ class Ui_Form(object):
 "\n"
 "/* Set style for login label and register label in function widget */\n"
 "#loginLabel, #registerLabel {\n"
-"    font-family: \"Viner Hand ITC\";\n"
+"    \n"
 "    font-size: 30px;\n"
 "}\n"
 "\n"
@@ -67,152 +67,41 @@ class Ui_Form(object):
 "#funcWidget QLineEdit:focus {\n"
 "    border-color: #5500ff;\n"
 "}\n"
-"\n"
-"/* Set style for all the buttons in function widget */\n"
-"#funcWidget QPushButton {\n"
-"    font-size: 12em;\n"
-"    border-radius: 5px;\n"
-"    color: #fff;\n"
-"}\n"
-"\n"
-"#funcWidget QPushButton:pressed {\n"
-"    padding-left: 10px;\n"
-"}\n"
-"\n"
-"/* Set style for login and create user button in function widget */\n"
-"#loginBtn, #createBtn {\n"
-"    background-color: #3554d1;\n"
-"}\n"
-"\n"
-"#loginBtn:hover, #loginBtn:pressed, #createBtn:hover, #createBtn:pressed {\n"
-"    background-color: #0000ff;\n"
-"}\n"
-"\n"
-"\n"
-"/* Set style for exit button in function widget */\n"
-"#exitBtn {\n"
-"    background-color: #d10000;\n"
-"}\n"
-"\n"
-"#exitBtn:hover, #exitBtn:pressed {\n"
-"    background-color: #910000;\n"
-"}\n"
-"\n"
-"/* Set style for register and back button in function widget */\n"
-"#registerBtn, #backBtn {\n"
-"    background-color: #55aa7f;\n"
-"}\n"
-"\n"
-"#registerBtn:hover, #registerBtn:pressed, #backBtn:hover, #backBtn:pressed {\n"
-"    background-color: #3aad00;\n"
-"}\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
-"\n"
 "")
         self.gridLayout = QtWidgets.QGridLayout(Form)
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.gridLayout.setSpacing(0)
         self.gridLayout.setObjectName("gridLayout")
+        spacerItem = QtWidgets.QSpacerItem(110, 835, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout.addItem(spacerItem, 0, 3, 1, 1)
         self.titleWidget = QtWidgets.QWidget(Form)
         self.titleWidget.setMinimumSize(QtCore.QSize(550, 650))
         self.titleWidget.setMaximumSize(QtCore.QSize(550, 650))
         self.titleWidget.setObjectName("titleWidget")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.titleWidget)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
-        spacerItem = QtWidgets.QSpacerItem(20, 224, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_2.addItem(spacerItem)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 224, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem1)
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setSpacing(30)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
-        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_4.addItem(spacerItem1)
-        self.toolButton = QtWidgets.QToolButton(self.titleWidget)
-        self.toolButton.setFocusPolicy(QtCore.Qt.WheelFocus)
-        self.toolButton.setStyleSheet("QToolButton {\n"
-"\n"
-"    padding: 8px 12px; /* Espacement interne */\n"
-"    border: 3px solid #202020;\n"
-"     background-color: #aaaaaa; \n"
-"    color: #202020;\n"
-"    border-radius: 12px;\n"
-"    font-size: 16px;\n"
-"    font-weight: bold;\n"
-"}\n"
-"\n"
-"QToolButton:hover {\n"
-"    background-color: #777;\n"
-"}\n"
-"\n"
-"")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/icon/icon/qr.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.toolButton.setIcon(icon)
-        self.toolButton.setIconSize(QtCore.QSize(210, 210))
-        self.toolButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
-        self.toolButton.setArrowType(QtCore.Qt.NoArrow)
-        self.toolButton.setObjectName("toolButton")
-        self.horizontalLayout_4.addWidget(self.toolButton)
-        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_4.addItem(spacerItem2)
-        self.verticalLayout.addLayout(self.horizontalLayout_4)
         self.titleLabel2 = QtWidgets.QLabel(self.titleWidget)
         self.titleLabel2.setAlignment(QtCore.Qt.AlignCenter)
         self.titleLabel2.setObjectName("titleLabel2")
         self.verticalLayout.addWidget(self.titleLabel2)
         self.verticalLayout_2.addLayout(self.verticalLayout)
-        spacerItem3 = QtWidgets.QSpacerItem(20, 224, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_2.addItem(spacerItem3)
+        spacerItem2 = QtWidgets.QSpacerItem(20, 224, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem2)
         self.gridLayout.addWidget(self.titleWidget, 0, 1, 2, 1)
         self.funcWidget = QtWidgets.QStackedWidget(Form)
         self.funcWidget.setMinimumSize(QtCore.QSize(550, 650))
         self.funcWidget.setMaximumSize(QtCore.QSize(550, 650))
-        self.funcWidget.setStyleSheet("QPushButton {\n"
-"    text-align: left;\n"
-"    border: 1px solid #4d4d4d;\n"
-"     background-color: #202020; \n"
-"    color: #d1d1d1;\n"
-"    border-radius: 5px;\n"
-"    height: 40px;\n"
-"    padding-left: 15px;\n"
-"    padding-right: 15px;\n"
-"     margin-top: 30px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: #777;\n"
-"}\n"
-"")
+        self.funcWidget.setStyleSheet("")
         self.funcWidget.setObjectName("funcWidget")
         self.page = QtWidgets.QWidget()
         self.page.setObjectName("page")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.page)
         self.gridLayout_2.setObjectName("gridLayout_2")
-        spacerItem4 = QtWidgets.QSpacerItem(79, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_2.addItem(spacerItem4, 1, 0, 1, 1)
-        spacerItem5 = QtWidgets.QSpacerItem(79, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_2.addItem(spacerItem5, 1, 2, 1, 1)
-        spacerItem6 = QtWidgets.QSpacerItem(20, 130, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_2.addItem(spacerItem6, 2, 1, 1, 1)
         self.verticalLayout_5 = QtWidgets.QVBoxLayout()
         self.verticalLayout_5.setSpacing(30)
         self.verticalLayout_5.setObjectName("verticalLayout_5")
@@ -259,32 +148,86 @@ class Ui_Form(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.exitBtn = QtWidgets.QPushButton(self.page)
         self.exitBtn.setMinimumSize(QtCore.QSize(0, 30))
-        self.exitBtn.setStyleSheet("")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/icon/icon/logout-48.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.exitBtn.setIcon(icon1)
+        self.exitBtn.setStyleSheet("QPushButton {\n"
+"    text-align: left;\n"
+"    border: 1px solid #4d4d4d;\n"
+"     background-color: #202020; \n"
+"    color: #d1d1d1;\n"
+"    border-radius: 5px;\n"
+"    height: 40px;\n"
+"    padding-left: 15px;\n"
+"    padding-right: 15px;\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #777;\n"
+"}")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/icon/icon/logout-48.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.exitBtn.setIcon(icon)
         self.exitBtn.setObjectName("exitBtn")
         self.horizontalLayout.addWidget(self.exitBtn)
         self.loginBtn = QtWidgets.QPushButton(self.page)
         self.loginBtn.setMinimumSize(QtCore.QSize(0, 30))
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(":/icon/icon/login-64.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.loginBtn.setIcon(icon2)
+        self.loginBtn.setStyleSheet("QPushButton {\n"
+"    text-align: left;\n"
+"    border: 1px solid #4d4d4d;\n"
+"     background-color: #202020; \n"
+"    color: #d1d1d1;\n"
+"    border-radius: 5px;\n"
+"    height: 40px;\n"
+"    padding-left: 15px;\n"
+"    padding-right: 15px;\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #777;\n"
+"}")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/icon/icon/login-64.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.loginBtn.setIcon(icon1)
         self.loginBtn.setObjectName("loginBtn")
         self.horizontalLayout.addWidget(self.loginBtn)
         self.verticalLayout_5.addLayout(self.horizontalLayout)
-        self.gridLayout_2.addLayout(self.verticalLayout_5, 1, 1, 1, 1)
+        self.gridLayout_2.addLayout(self.verticalLayout_5, 1, 1, 1, 2)
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        spacerItem3 = QtWidgets.QSpacerItem(368, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_4.addItem(spacerItem3)
+        self.keyboard_btn = QtWidgets.QPushButton(self.page)
+        self.keyboard_btn.setStyleSheet("QPushButton {\n"
+"    text-align: left;\n"
+"    border: 1px solid #4d4d4d;\n"
+"     background-color: #202020; \n"
+"    color: #d1d1d1;\n"
+"    border-radius: 5px;\n"
+"    height: 25px;\n"
+"    padding-left: 15px;\n"
+"    padding-right: 15px;\n"
+"    padding-bottom: 2px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #777;\n"
+"}")
+        self.keyboard_btn.setObjectName("keyboard_btn")
+        self.horizontalLayout_4.addWidget(self.keyboard_btn)
+        self.gridLayout_2.addLayout(self.horizontalLayout_4, 3, 0, 1, 4)
+        spacerItem4 = QtWidgets.QSpacerItem(20, 130, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_2.addItem(spacerItem4, 2, 1, 1, 2)
+        spacerItem5 = QtWidgets.QSpacerItem(79, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_2.addItem(spacerItem5, 1, 3, 1, 1)
+        spacerItem6 = QtWidgets.QSpacerItem(79, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_2.addItem(spacerItem6, 1, 0, 1, 1)
         spacerItem7 = QtWidgets.QSpacerItem(20, 129, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
-        self.gridLayout_2.addItem(spacerItem7, 0, 1, 1, 1)
+        self.gridLayout_2.addItem(spacerItem7, 0, 1, 1, 2)
         self.funcWidget.addWidget(self.page)
         self.page_2 = QtWidgets.QWidget()
         self.page_2.setObjectName("page_2")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.page_2)
         self.gridLayout_3.setObjectName("gridLayout_3")
-        spacerItem8 = QtWidgets.QSpacerItem(20, 129, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_3.addItem(spacerItem8, 0, 1, 1, 1)
-        spacerItem9 = QtWidgets.QSpacerItem(79, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_3.addItem(spacerItem9, 1, 0, 1, 1)
         self.verticalLayout_6 = QtWidgets.QVBoxLayout()
         self.verticalLayout_6.setSpacing(30)
         self.verticalLayout_6.setObjectName("verticalLayout_6")
@@ -331,30 +274,39 @@ class Ui_Form(object):
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.backBtn = QtWidgets.QPushButton(self.page_2)
         self.backBtn.setMinimumSize(QtCore.QSize(0, 30))
-        icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(":/icon/icon/arrow-80-48.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.backBtn.setIcon(icon3)
+        self.backBtn.setStyleSheet("")
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(":/icon/icon/arrow-80-48.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.backBtn.setIcon(icon2)
         self.backBtn.setObjectName("backBtn")
         self.horizontalLayout_2.addWidget(self.backBtn)
         self.createBtn = QtWidgets.QPushButton(self.page_2)
         self.createBtn.setMinimumSize(QtCore.QSize(0, 30))
-        icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(":/icon/icon/check-mark-3-48.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.createBtn.setIcon(icon4)
+        self.createBtn.setStyleSheet("")
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap(":/icon/icon/check-mark-3-48.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.createBtn.setIcon(icon3)
         self.createBtn.setObjectName("createBtn")
         self.horizontalLayout_2.addWidget(self.createBtn)
         self.verticalLayout_6.addLayout(self.horizontalLayout_2)
         self.gridLayout_3.addLayout(self.verticalLayout_6, 1, 1, 1, 1)
+        spacerItem8 = QtWidgets.QSpacerItem(79, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_3.addItem(spacerItem8, 1, 0, 1, 1)
+        spacerItem9 = QtWidgets.QSpacerItem(20, 129, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_3.addItem(spacerItem9, 0, 1, 1, 1)
         spacerItem10 = QtWidgets.QSpacerItem(79, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.gridLayout_3.addItem(spacerItem10, 1, 2, 1, 1)
         spacerItem11 = QtWidgets.QSpacerItem(20, 130, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.gridLayout_3.addItem(spacerItem11, 2, 1, 1, 1)
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        spacerItem12 = QtWidgets.QSpacerItem(453, 56, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem12)
+        self.gridLayout_3.addLayout(self.horizontalLayout_3, 3, 0, 1, 3)
         self.funcWidget.addWidget(self.page_2)
         self.gridLayout.addWidget(self.funcWidget, 0, 2, 2, 1)
-        spacerItem12 = QtWidgets.QSpacerItem(111, 835, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout.addItem(spacerItem12, 0, 0, 2, 1)
-        spacerItem13 = QtWidgets.QSpacerItem(110, 835, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout.addItem(spacerItem13, 0, 3, 1, 1)
+        spacerItem13 = QtWidgets.QSpacerItem(111, 835, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout.addItem(spacerItem13, 0, 0, 2, 1)
 
         self.retranslateUi(Form)
         self.funcWidget.setCurrentIndex(0)
@@ -363,13 +315,13 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.toolButton.setText(_translate("Form", "Se connecter avec QR Code"))
         self.titleLabel2.setText(_translate("Form", "T3 Shield"))
         self.loginLabel.setText(_translate("Form", "Authentification"))
         self.label.setText(_translate("Form", "Nom d\'utilisateur"))
         self.label_2.setText(_translate("Form", "Mot de passe"))
         self.exitBtn.setText(_translate("Form", "Sortir"))
         self.loginBtn.setText(_translate("Form", "Se connecter"))
+        self.keyboard_btn.setText(_translate("Form", "⌨"))
         self.registerLabel.setText(_translate("Form", "Register"))
         self.label_3.setText(_translate("Form", "Username"))
         self.label_4.setText(_translate("Form", "Password"))

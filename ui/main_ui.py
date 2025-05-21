@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'main.ui'
+# Form implementation generated from reading ui file 'main_v1.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.11
 #
@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1480, 869)
+        MainWindow.resize(1711, 862)
         MainWindow.setStyleSheet("#title_frame {\n"
 "    border-top-left-radius: 10px;  /* Rounds the top left corner of the title frame */\n"
 "    background-color: #4789f3;  /* Sets a blue background color for the title frame, making it stand out */\n"
@@ -166,30 +166,8 @@ class Ui_MainWindow(object):
 "\n"
 "")
         self.menuWidget.setObjectName("menuWidget")
-        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.menuWidget)
-        self.verticalLayout_3.setContentsMargins(10, 20, 10, 20)
-        self.verticalLayout_3.setSpacing(5)
-        self.verticalLayout_3.setObjectName("verticalLayout_3")
-        self.label_arm = QtWidgets.QLabel(self.menuWidget)
-        self.label_arm.setStyleSheet("QLabel {\n"
-"    padding-bottom: 20px; \n"
-"}\n"
-"\n"
-"\n"
-"\n"
-"")
-        self.label_arm.setText("")
-        self.label_arm.setPixmap(QtGui.QPixmap(":/icon/icon/armoir.png"))
-        self.label_arm.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_arm.setObjectName("label_arm")
-        self.verticalLayout_3.addWidget(self.label_arm)
-        self.label_3 = QtWidgets.QLabel(self.menuWidget)
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_3.setFont(font)
-        self.label_3.setObjectName("label_3")
-        self.verticalLayout_3.addWidget(self.label_3)
+        self.gridLayout_13 = QtWidgets.QGridLayout(self.menuWidget)
+        self.gridLayout_13.setObjectName("gridLayout_13")
         self.label_aref = QtWidgets.QLabel(self.menuWidget)
         self.label_aref.setStyleSheet("QLabel {\n"
 "    padding-left: 20px;     /* Espacement à gauche */\n"
@@ -197,14 +175,14 @@ class Ui_MainWindow(object):
 "\n"
 "")
         self.label_aref.setObjectName("label_aref")
-        self.verticalLayout_3.addWidget(self.label_aref)
+        self.gridLayout_13.addWidget(self.label_aref, 2, 0, 1, 3)
         self.label_5 = QtWidgets.QLabel(self.menuWidget)
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
         self.label_5.setFont(font)
         self.label_5.setObjectName("label_5")
-        self.verticalLayout_3.addWidget(self.label_5)
+        self.gridLayout_13.addWidget(self.label_5, 3, 0, 1, 3)
         self.label_dp = QtWidgets.QLabel(self.menuWidget)
         self.label_dp.setStyleSheet("QLabel {\n"
 "    padding-left: 20px;     /* Espacement à gauche */\n"
@@ -212,29 +190,7 @@ class Ui_MainWindow(object):
 "\n"
 "")
         self.label_dp.setObjectName("label_dp")
-        self.verticalLayout_3.addWidget(self.label_dp)
-        self.label_8 = QtWidgets.QLabel(self.menuWidget)
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_8.setFont(font)
-        self.label_8.setObjectName("label_8")
-        self.verticalLayout_3.addWidget(self.label_8)
-        self.label_ville = QtWidgets.QLabel(self.menuWidget)
-        self.label_ville.setStyleSheet("QLabel {\n"
-"    padding-left: 20px;     /* Espacement à gauche */\n"
-"}\n"
-"\n"
-"")
-        self.label_ville.setObjectName("label_ville")
-        self.verticalLayout_3.addWidget(self.label_ville)
-        self.label_9 = QtWidgets.QLabel(self.menuWidget)
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_9.setFont(font)
-        self.label_9.setObjectName("label_9")
-        self.verticalLayout_3.addWidget(self.label_9)
+        self.gridLayout_13.addWidget(self.label_dp, 4, 0, 1, 3)
         self.label_lycee = QtWidgets.QLabel(self.menuWidget)
         self.label_lycee.setStyleSheet("QLabel {\n"
 "    padding-left: 20px;     /* Espacement à gauche */\n"
@@ -242,24 +198,7 @@ class Ui_MainWindow(object):
 "\n"
 "")
         self.label_lycee.setObjectName("label_lycee")
-        self.verticalLayout_3.addWidget(self.label_lycee)
-        self.label_11 = QtWidgets.QLabel(self.menuWidget)
-        font = QtGui.QFont()
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_11.setFont(font)
-        self.label_11.setObjectName("label_11")
-        self.verticalLayout_3.addWidget(self.label_11)
-        self.label_salle = QtWidgets.QLabel(self.menuWidget)
-        self.label_salle.setStyleSheet("QLabel {\n"
-"    padding-left: 20px;     /* Espacement à gauche */\n"
-"}\n"
-"\n"
-"")
-        self.label_salle.setObjectName("label_salle")
-        self.verticalLayout_3.addWidget(self.label_salle)
-        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_3.addItem(spacerItem1)
+        self.gridLayout_13.addWidget(self.label_lycee, 8, 0, 1, 3)
         self.pushButton_home = QtWidgets.QPushButton(self.menuWidget)
         self.pushButton_home.setMinimumSize(QtCore.QSize(0, 40))
         self.pushButton_home.setMaximumSize(QtCore.QSize(16777215, 45))
@@ -277,7 +216,7 @@ class Ui_MainWindow(object):
         self.pushButton_home.setChecked(True)
         self.pushButton_home.setAutoExclusive(True)
         self.pushButton_home.setObjectName("pushButton_home")
-        self.verticalLayout_3.addWidget(self.pushButton_home)
+        self.gridLayout_13.addWidget(self.pushButton_home, 14, 0, 1, 3)
         self.pushButton_config = QtWidgets.QPushButton(self.menuWidget)
         self.pushButton_config.setMinimumSize(QtCore.QSize(0, 40))
         self.pushButton_config.setMaximumSize(QtCore.QSize(16777215, 45))
@@ -286,12 +225,12 @@ class Ui_MainWindow(object):
         font.setPointSize(10)
         self.pushButton_config.setFont(font)
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(":/icon/icon/settings.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap(":/icon/icon/_settings.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_config.setIcon(icon4)
         self.pushButton_config.setCheckable(True)
         self.pushButton_config.setAutoExclusive(True)
         self.pushButton_config.setObjectName("pushButton_config")
-        self.verticalLayout_3.addWidget(self.pushButton_config)
+        self.gridLayout_13.addWidget(self.pushButton_config, 15, 0, 1, 3)
         self.pushButton_exit = QtWidgets.QPushButton(self.menuWidget)
         self.pushButton_exit.setMinimumSize(QtCore.QSize(0, 40))
         self.pushButton_exit.setMaximumSize(QtCore.QSize(16777215, 45))
@@ -313,7 +252,71 @@ class Ui_MainWindow(object):
         icon5.addPixmap(QtGui.QPixmap(":/icon/icon/exit.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_exit.setIcon(icon5)
         self.pushButton_exit.setObjectName("pushButton_exit")
-        self.verticalLayout_3.addWidget(self.pushButton_exit)
+        self.gridLayout_13.addWidget(self.pushButton_exit, 16, 0, 1, 3)
+        self.label_12 = QtWidgets.QLabel(self.menuWidget)
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_12.setFont(font)
+        self.label_12.setObjectName("label_12")
+        self.gridLayout_13.addWidget(self.label_12, 11, 0, 1, 3)
+        self.label_matiere = QtWidgets.QLabel(self.menuWidget)
+        self.label_matiere.setStyleSheet("QLabel {\n"
+"    padding-left: 20px;     /* Espacement à gauche */\n"
+"}\n"
+"\n"
+"")
+        self.label_matiere.setObjectName("label_matiere")
+        self.gridLayout_13.addWidget(self.label_matiere, 12, 0, 1, 3)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_13.addItem(spacerItem1, 13, 0, 1, 3)
+        self.Layout_svg = QtWidgets.QVBoxLayout()
+        self.Layout_svg.setObjectName("Layout_svg")
+        self.gridLayout_13.addLayout(self.Layout_svg, 0, 0, 1, 3)
+        self.label_ville = QtWidgets.QLabel(self.menuWidget)
+        self.label_ville.setStyleSheet("QLabel {\n"
+"    padding-left: 20px;     /* Espacement à gauche */\n"
+"}\n"
+"\n"
+"")
+        self.label_ville.setObjectName("label_ville")
+        self.gridLayout_13.addWidget(self.label_ville, 6, 0, 1, 3)
+        self.label_salle = QtWidgets.QLabel(self.menuWidget)
+        self.label_salle.setStyleSheet("QLabel {\n"
+"    padding-left: 20px;     /* Espacement à gauche */\n"
+"}\n"
+"\n"
+"")
+        self.label_salle.setObjectName("label_salle")
+        self.gridLayout_13.addWidget(self.label_salle, 10, 0, 1, 3)
+        self.label_3 = QtWidgets.QLabel(self.menuWidget)
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_3.setFont(font)
+        self.label_3.setObjectName("label_3")
+        self.gridLayout_13.addWidget(self.label_3, 1, 0, 1, 3)
+        self.label_8 = QtWidgets.QLabel(self.menuWidget)
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_8.setFont(font)
+        self.label_8.setObjectName("label_8")
+        self.gridLayout_13.addWidget(self.label_8, 5, 0, 1, 3)
+        self.label_9 = QtWidgets.QLabel(self.menuWidget)
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_9.setFont(font)
+        self.label_9.setObjectName("label_9")
+        self.gridLayout_13.addWidget(self.label_9, 7, 0, 1, 3)
+        self.label_11 = QtWidgets.QLabel(self.menuWidget)
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_11.setFont(font)
+        self.label_11.setObjectName("label_11")
+        self.gridLayout_13.addWidget(self.label_11, 9, 0, 1, 3)
         self.gridLayout_2.addWidget(self.menuWidget, 0, 0, 1, 1)
         self.stackedWidget = QtWidgets.QStackedWidget(self.main_frame)
         self.stackedWidget.setStyleSheet("QLabel {\n"
@@ -340,6 +343,37 @@ class Ui_MainWindow(object):
 "    background-color: #777;\n"
 "}\n"
 "\n"
+"QToolButton {\n"
+"    /* Dimensions & espacement */\n"
+"    height: 300px;\n"
+"    padding: 15px;\n"
+"    margin: 15px;\n"
+"\n"
+"    /* Bordures uniquement sur les côtés gauche et droit en violet */\n"
+"    border-top: none;\n"
+"    border-bottom: none;\n"
+"    border-left: 1px solid #8A2BE2;   /* violet */\n"
+"    border-right: 1px solid #8A2BE2;  /* violet */\n"
+"\n"
+"    /* Coins arrondis alternés : top-right & bottom-left */\n"
+"    border-top-right-radius: 40px;\n"
+"    border-bottom-left-radius: 40px;\n"
+"\n"
+"    background-color: #e6e6e6;\n"
+"    transition: background-color 150ms ease, color 150ms ease;\n"
+"}\n"
+"\n"
+"QToolButton:hover {\n"
+"    background-color: #777;\n"
+"    color: #fff;\n"
+"}\n"
+"\n"
+"QToolButton:pressed {\n"
+"    background-color: #555;\n"
+"    color: #fff;\n"
+"}\n"
+"\n"
+"\n"
 "")
         self.stackedWidget.setObjectName("stackedWidget")
         self.page_1 = QtWidgets.QWidget()
@@ -348,179 +382,69 @@ class Ui_MainWindow(object):
         self.gridLayout_3.setObjectName("gridLayout_3")
         self.toolButton_general = QtWidgets.QToolButton(self.page_1)
         font = QtGui.QFont()
-        font.setPointSize(15)
-        font.setBold(True)
-        font.setWeight(75)
+        font.setFamily("Microsoft New Tai Lue")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setWeight(50)
         self.toolButton_general.setFont(font)
-        self.toolButton_general.setStyleSheet("QToolButton {\n"
-"    text-align: left;\n"
-"    border: 1px solid #4d4d4d;\n"
-"    border-radius: 5px;\n"
-"    height: 300px;\n"
-"    padding-left: 15px;\n"
-"    padding-right: 15px;\n"
-"    padding-top: 15px;\n"
-"    background-color: #e6e6e6;\n"
-"}\n"
-"\n"
-"QToolButton:hover {\n"
-"    background-color: #777;\n"
-"}")
+        self.toolButton_general.setStyleSheet("")
         icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap(":/icon/icon/rf.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon6.addPixmap(QtGui.QPixmap(":/icon/icon/general.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.toolButton_general.setIcon(icon6)
         self.toolButton_general.setIconSize(QtCore.QSize(600, 250))
         self.toolButton_general.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.toolButton_general.setObjectName("toolButton_general")
-        self.gridLayout_3.addWidget(self.toolButton_general, 0, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.toolButton_general, 0, 1, 1, 1)
+        self.toolButton_test = QtWidgets.QToolButton(self.page_1)
+        font = QtGui.QFont()
+        font.setFamily("Microsoft New Tai Lue")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setWeight(50)
+        self.toolButton_test.setFont(font)
+        self.toolButton_test.setStyleSheet("")
+        icon7 = QtGui.QIcon()
+        icon7.addPixmap(QtGui.QPixmap(":/icon/icon/test.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.toolButton_test.setIcon(icon7)
+        self.toolButton_test.setIconSize(QtCore.QSize(600, 250))
+        self.toolButton_test.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
+        self.toolButton_test.setObjectName("toolButton_test")
+        self.gridLayout_3.addWidget(self.toolButton_test, 0, 0, 1, 1)
         self.toolButton_mobility = QtWidgets.QToolButton(self.page_1)
         font = QtGui.QFont()
-        font.setPointSize(15)
-        font.setBold(True)
-        font.setWeight(75)
+        font.setFamily("Microsoft New Tai Lue")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setWeight(50)
         self.toolButton_mobility.setFont(font)
-        self.toolButton_mobility.setStyleSheet("QToolButton {\n"
-"    text-align: left;\n"
-"    border: 1px solid #4d4d4d;\n"
-"    border-radius: 5px;\n"
-"    height: 300px;\n"
-"    padding-left: 15px;\n"
-"    padding-right: 15px;\n"
-"    padding-top: 15px;\n"
-"     background-color: #e6e6e6;\n"
-"}\n"
-"\n"
-"QToolButton:hover {\n"
-"    background-color: #777;\n"
-"}")
-        icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap(":/icon/icon/mo_rf.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.toolButton_mobility.setIcon(icon7)
+        self.toolButton_mobility.setStyleSheet("")
+        icon8 = QtGui.QIcon()
+        icon8.addPixmap(QtGui.QPixmap(":/icon/icon/individual.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.toolButton_mobility.setIcon(icon8)
         self.toolButton_mobility.setIconSize(QtCore.QSize(600, 250))
         self.toolButton_mobility.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.toolButton_mobility.setObjectName("toolButton_mobility")
-        self.gridLayout_3.addWidget(self.toolButton_mobility, 1, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.toolButton_mobility, 2, 1, 1, 1)
+        self.toolButton_configuration = QtWidgets.QToolButton(self.page_1)
+        font = QtGui.QFont()
+        font.setFamily("Microsoft New Tai Lue")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setWeight(50)
+        self.toolButton_configuration.setFont(font)
+        self.toolButton_configuration.setStyleSheet("")
+        icon9 = QtGui.QIcon()
+        icon9.addPixmap(QtGui.QPixmap(":/icon/icon/settings.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.toolButton_configuration.setIcon(icon9)
+        self.toolButton_configuration.setIconSize(QtCore.QSize(600, 250))
+        self.toolButton_configuration.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
+        self.toolButton_configuration.setObjectName("toolButton_configuration")
+        self.gridLayout_3.addWidget(self.toolButton_configuration, 2, 0, 1, 1)
         self.stackedWidget.addWidget(self.page_1)
         self.page_2 = QtWidgets.QWidget()
         self.page_2.setObjectName("page_2")
         self.gridLayout_4 = QtWidgets.QGridLayout(self.page_2)
         self.gridLayout_4.setObjectName("gridLayout_4")
-        self.frame_2 = QtWidgets.QFrame(self.page_2)
-        self.frame_2.setStyleSheet(".QFrame {\n"
-"    background-color: rgb(40, 40, 40); /* Fond sombre */\n"
-"    color: white; /* Texte en blanc */\n"
-"    font: 14px \"Arial\"; /* Police et taille du texte */\n"
-"    border: 2px solid rgb(80, 80, 80); /* Bordure subtile */\n"
-"    border-radius: 10px; /* Coins arrondis */\n"
-"    padding: 8px; /* Espacement interne pour le texte */\n"
-"}\n"
-"\n"
-"")
-        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_2.setObjectName("frame_2")
-        self.gridLayout_7 = QtWidgets.QGridLayout(self.frame_2)
-        self.gridLayout_7.setObjectName("gridLayout_7")
-        self.tableWidget_m = QtWidgets.QTableWidget(self.frame_2)
-        self.tableWidget_m.setStyleSheet("/* Style général du QTableWidget */\n"
-"QTableWidget {\n"
-"    background-color: rgb(30, 30, 30); /* Fond sombre */\n"
-"    color: white; /* Texte blanc */\n"
-"    font: 14px \"Arial\"; /* Police moderne */\n"
-"    border: 2px solid rgb(50, 50, 50); /* Bordure légère */\n"
-"    gridline-color: rgb(80, 80, 80); /* Couleur des lignes */\n"
-"   /*  border-radius: 8px; Coins arrondis */\n"
-"}\n"
-"\n"
-"/* En-tête des colonnes */\n"
-"QHeaderView::section {\n"
-"    background-color: rgb(50, 50, 50); /* Fond plus clair pour les en-têtes */\n"
-"    color: white; /* Texte blanc */\n"
-"    font: bold 14px \"Arial\"; /* Police en gras */\n"
-"    padding: 6px;\n"
-"    border: 1px solid rgb(80, 80, 80);\n"
-"\n"
-"}\n"
-"\n"
-"/* Surbrillance des lignes lors du survol */\n"
-"QTableWidget::item:hover {\n"
-"    background-color: rgb(70, 70, 70); /* Gris foncé au survol */\n"
-"}\n"
-"\n"
-"/* Sélection d\'une ligne */\n"
-"QTableWidget::item:selected {\n"
-"    background-color: rgb(0, 150, 255); /* Bleu moderne */\n"
-"    color: white; /* Texte toujours blanc */\n"
-"}\n"
-"\n"
-"/* Ajustement des coins pour l\'en-tête */\n"
-"QTableCornerButton::section {\n"
-"    background-color: rgb(50, 50, 50);\n"
-"    border: 1px solid rgb(80, 80, 80);\n"
-"}\n"
-"\n"
-"\n"
-"")
-        self.tableWidget_m.setObjectName("tableWidget_m")
-        self.tableWidget_m.setColumnCount(4)
-        self.tableWidget_m.setRowCount(9)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_m.setVerticalHeaderItem(0, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_m.setVerticalHeaderItem(1, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_m.setVerticalHeaderItem(2, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_m.setVerticalHeaderItem(3, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_m.setVerticalHeaderItem(4, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_m.setVerticalHeaderItem(5, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_m.setVerticalHeaderItem(6, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_m.setVerticalHeaderItem(7, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_m.setVerticalHeaderItem(8, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_m.setHorizontalHeaderItem(0, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_m.setHorizontalHeaderItem(1, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_m.setHorizontalHeaderItem(2, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_m.setHorizontalHeaderItem(3, item)
-        self.gridLayout_7.addWidget(self.tableWidget_m, 1, 0, 1, 3)
-        self.label_counter_m_ = QtWidgets.QLabel(self.frame_2)
-        self.label_counter_m_.setStyleSheet(".QLabel{\n"
-"    color: white;\n"
-"    font: bold 14px \"Arial\"; /* Police en gras */\n"
-"    padding: 0px;\n"
-"}")
-        self.label_counter_m_.setObjectName("label_counter_m_")
-        self.gridLayout_7.addWidget(self.label_counter_m_, 0, 1, 1, 1)
-        self.label_26 = QtWidgets.QLabel(self.frame_2)
-        self.label_26.setStyleSheet(".QLabel{\n"
-"    color: white;\n"
-"    font: bold 14px \"Arial\"; /* Police en gras */\n"
-"    padding: 0px;\n"
-"}")
-        self.label_26.setObjectName("label_26")
-        self.gridLayout_7.addWidget(self.label_26, 0, 0, 1, 1)
-        spacerItem2 = QtWidgets.QSpacerItem(664, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_7.addItem(spacerItem2, 0, 2, 1, 1)
-        self.gridLayout_4.addWidget(self.frame_2, 5, 0, 1, 3)
-        self.label_15 = QtWidgets.QLabel(self.page_2)
-        self.label_15.setStyleSheet("QLabel {\n"
-"    min-width: 70px;\n"
-"    max-width: 70px;\n"
-"    min-height: 20px;  /* Optionnel selon le besoin */\n"
-"    max-height: 20px;\n"
-"\n"
-"}\n"
-"")
-        self.label_15.setObjectName("label_15")
-        self.gridLayout_4.addWidget(self.label_15, 2, 0, 1, 1)
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
         self.pushButton_retour_mh = QtWidgets.QPushButton(self.page_2)
@@ -532,11 +456,22 @@ class Ui_MainWindow(object):
 "}")
         self.label_analyse_en_cours.setObjectName("label_analyse_en_cours")
         self.horizontalLayout_4.addWidget(self.label_analyse_en_cours)
-        spacerItem3 = QtWidgets.QSpacerItem(698, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_4.addItem(spacerItem3)
-        self.pushButton_annoter_m = QtWidgets.QPushButton(self.page_2)
-        self.pushButton_annoter_m.setObjectName("pushButton_annoter_m")
-        self.horizontalLayout_4.addWidget(self.pushButton_annoter_m)
+        spacerItem2 = QtWidgets.QSpacerItem(698, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_4.addItem(spacerItem2)
+        self.label_mul_m = QtWidgets.QLabel(self.page_2)
+        self.label_mul_m.setStyleSheet("\n"
+"QLabel{\n"
+"    padding-top: 17px;\n"
+"}")
+        self.label_mul_m.setAlignment(QtCore.Qt.AlignLeading)
+        self.label_mul_m.setObjectName("label_mul_m")
+        self.horizontalLayout_4.addWidget(self.label_mul_m)
+        self.pushButton_effacer = QtWidgets.QPushButton(self.page_2)
+        self.pushButton_effacer.setObjectName("pushButton_effacer")
+        self.horizontalLayout_4.addWidget(self.pushButton_effacer)
+        self.pushButton_valider = QtWidgets.QPushButton(self.page_2)
+        self.pushButton_valider.setObjectName("pushButton_valider")
+        self.horizontalLayout_4.addWidget(self.pushButton_valider)
         self.pushButton_stop_m = QtWidgets.QPushButton(self.page_2)
         self.pushButton_stop_m.setObjectName("pushButton_stop_m")
         self.horizontalLayout_4.addWidget(self.pushButton_stop_m)
@@ -546,33 +481,82 @@ class Ui_MainWindow(object):
         self.pushButton_envoyer_r_m = QtWidgets.QPushButton(self.page_2)
         self.pushButton_envoyer_r_m.setObjectName("pushButton_envoyer_r_m")
         self.horizontalLayout_4.addWidget(self.pushButton_envoyer_r_m)
-        self.gridLayout_4.addLayout(self.horizontalLayout_4, 6, 0, 1, 3)
-        self.label_27 = QtWidgets.QLabel(self.page_2)
-        self.label_27.setStyleSheet("")
-        self.label_27.setObjectName("label_27")
-        self.gridLayout_4.addWidget(self.label_27, 0, 0, 1, 2)
-        self.horizontalLayout_10 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_10.setObjectName("horizontalLayout_10")
-        spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_10.addItem(spacerItem4)
-        self.label_mul_m = QtWidgets.QLabel(self.page_2)
-        self.label_mul_m.setStyleSheet("QLabel {\n"
-"    margin-bottom:10px;\n"
-"    margin-top:10px;\n"
-"    background: #777;\n"
-"    font: bold 60px \"Arial\";\n"
-"    color: white;\n"
-"    border-radius: 10px;\n"
-"    qproperty-alignment: \'AlignCenter\';\n"
-"    padding: 40px 250px 40px 250px\n"
+        self.gridLayout_4.addLayout(self.horizontalLayout_4, 3, 0, 1, 2)
+        self.frame_2 = QtWidgets.QFrame(self.page_2)
+        self.frame_2.setStyleSheet(".QFrame {\n"
+"    background-color: rgb(40, 40, 40); /* Fond sombre */\n"
+"    color: white; /* Texte en blanc */\n"
+"    font: 14px \"Arial\"; /* Police et taille du texte */\n"
+"    border: 2px solid rgb(80, 80, 80); /* Bordure subtile */\n"
+"    border-radius: 10px; /* Coins arrondis */\n"
+"    padding: 8px; /* Espacement interne pour le texte */\n"
 "}\n"
+"\n"
+"QLabel {\n"
+"    color: #d1d1d1;\n"
+"    font: bold 15px \"Arial\";\n"
+"    line-height: 30;       /* Espacement entre les lignes de texte */\n"
+"    letter-spacing: 1px;    /* Espacement entre les lettres */\n"
+"    qproperty-alignment: AlignLeft;\n"
+"    padding: 5;\n"
+"}\n"
+"\n"
+"QLineEdit {\n"
+"    background-color: rgb(60, 60, 60);     /* Fond un peu plus clair que QFrame */\n"
+"    color: white;                          /* Texte blanc */\n"
+"    font: 14px \"Arial\";                    /* Même police que les autres */\n"
+"    border: 2px solid rgb(100, 100, 100);  /* Bordure légèrement visible */\n"
+"    border-radius: 8px;                    /* Coins arrondis */\n"
+"    padding: 6px 10px;                     /* Espacement interne confortable */\n"
+"    selection-background-color: rgb(90, 150, 240); /* Couleur de sélection */\n"
+"    selection-color: black;               /* Couleur du texte sélectionné */\n"
+"    \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 2px solid rgb(0, 120, 215);    /* Accent visuel quand actif */\n"
+"    background-color: rgb(70, 70, 70);     /* Légèrement plus clair au focus */\n"
+"}\n"
+"\n"
+"QComboBox {\n"
+"    background-color: rgb(60, 60, 60);     /* Fond comme QLineEdit */\n"
+"    color: white;                          /* Texte blanc */\n"
+"    font: 14px \"Arial\";                    /* Même police */\n"
+"    border: 2px solid rgb(100, 100, 100);  /* Bordure similaire */\n"
+"    border-radius: 8px;                    /* Coins arrondis identiques */\n"
+"    padding: 6px 10px;                     /* Espacement interne */\n"
+"    selection-background-color: rgb(90, 150, 240);\n"
+"    selection-color: black;\n"
+"}\n"
+"\n"
+"QComboBox:focus {\n"
+"    border: 2px solid rgb(0, 120, 215);    /* Accent visuel quand actif */\n"
+"    background-color: rgb(70, 70, 70);     /* Même effet de surbrillance */\n"
+"}\n"
+"\n"
+"QComboBox::drop-down {\n"
+"    subcontrol-origin: padding;\n"
+"    subcontrol-position: top right;\n"
+"    width: 25px;\n"
+"    border-left: 1px solid rgb(100, 100, 100);\n"
+"    background-color: rgb(60, 60, 60);\n"
+"    border-top-right-radius: 8px;\n"
+"    border-bottom-right-radius: 8px;\n"
+"}\n"
+"\n"
+"QComboBox::down-arrow {\n"
+"    image: url(static/icon/down-arrow.svg); /* Assure-toi que le fichier existe */\n"
+"    width: 12px;\n"
+"    height: 12px;\n"
+"}\n"
+"\n"
 "")
-        self.label_mul_m.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_mul_m.setObjectName("label_mul_m")
-        self.horizontalLayout_10.addWidget(self.label_mul_m)
-        spacerItem5 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_10.addItem(spacerItem5)
-        self.gridLayout_4.addLayout(self.horizontalLayout_10, 1, 0, 1, 3)
+        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_2.setObjectName("frame_2")
+        self.gridLayout_7 = QtWidgets.QGridLayout(self.frame_2)
+        self.gridLayout_7.setObjectName("gridLayout_7")
+        self.gridLayout_4.addWidget(self.frame_2, 2, 0, 1, 2)
         self.stackedWidget.addWidget(self.page_2)
         self.page_3 = QtWidgets.QWidget()
         self.page_3.setObjectName("page_3")
@@ -587,8 +571,8 @@ class Ui_MainWindow(object):
         self.pushButton_retour_g = QtWidgets.QPushButton(self.page_3)
         self.pushButton_retour_g.setObjectName("pushButton_retour_g")
         self.horizontalLayout_29.addWidget(self.pushButton_retour_g)
-        spacerItem6 = QtWidgets.QSpacerItem(698, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_29.addItem(spacerItem6)
+        spacerItem3 = QtWidgets.QSpacerItem(698, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_29.addItem(spacerItem3)
         self.pushButton_lancer_g = QtWidgets.QPushButton(self.page_3)
         self.pushButton_lancer_g.setObjectName("pushButton_lancer_g")
         self.horizontalLayout_29.addWidget(self.pushButton_lancer_g)
@@ -789,8 +773,8 @@ class Ui_MainWindow(object):
 "}")
         self.label_55.setObjectName("label_55")
         self.gridLayout_30.addWidget(self.label_55, 0, 0, 1, 1)
-        spacerItem7 = QtWidgets.QSpacerItem(664, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_30.addItem(spacerItem7, 0, 2, 1, 1)
+        spacerItem4 = QtWidgets.QSpacerItem(664, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_30.addItem(spacerItem4, 0, 2, 1, 1)
         self.gridLayout_6.addWidget(self.frame_12, 4, 0, 1, 1)
         self.stackedWidget.addWidget(self.page_3)
         self.page_4 = QtWidgets.QWidget()
@@ -875,170 +859,104 @@ class Ui_MainWindow(object):
         self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_4.setObjectName("frame_4")
-        self.gridLayout_10 = QtWidgets.QGridLayout(self.frame_4)
+        self.gridLayout_12 = QtWidgets.QGridLayout(self.frame_4)
+        self.gridLayout_12.setObjectName("gridLayout_12")
+        self.gridLayout_10 = QtWidgets.QGridLayout()
         self.gridLayout_10.setObjectName("gridLayout_10")
-        self.label_17 = QtWidgets.QLabel(self.frame_4)
-        self.label_17.setObjectName("label_17")
-        self.gridLayout_10.addWidget(self.label_17, 10, 0, 1, 1)
-        self.label_13 = QtWidgets.QLabel(self.frame_4)
-        self.label_13.setObjectName("label_13")
-        self.gridLayout_10.addWidget(self.label_13, 2, 0, 1, 1)
+        self.label_20 = QtWidgets.QLabel(self.frame_4)
+        self.label_20.setObjectName("label_20")
+        self.gridLayout_10.addWidget(self.label_20, 0, 0, 1, 1)
+        self.label_21 = QtWidgets.QLabel(self.frame_4)
+        self.label_21.setObjectName("label_21")
+        self.gridLayout_10.addWidget(self.label_21, 0, 1, 1, 1)
+        self.comboBox_cols = QtWidgets.QComboBox(self.frame_4)
+        self.comboBox_cols.setObjectName("comboBox_cols")
+        self.comboBox_cols.addItem("")
+        self.comboBox_cols.addItem("")
+        self.comboBox_cols.addItem("")
+        self.comboBox_cols.addItem("")
+        self.comboBox_cols.addItem("")
+        self.gridLayout_10.addWidget(self.comboBox_cols, 1, 0, 1, 1)
+        self.comboBox_rows = QtWidgets.QComboBox(self.frame_4)
+        self.comboBox_rows.setObjectName("comboBox_rows")
+        self.comboBox_rows.addItem("")
+        self.comboBox_rows.addItem("")
+        self.comboBox_rows.addItem("")
+        self.comboBox_rows.addItem("")
+        self.comboBox_rows.addItem("")
+        self.comboBox_rows.addItem("")
+        self.comboBox_rows.addItem("")
+        self.comboBox_rows.addItem("")
+        self.comboBox_rows.addItem("")
+        self.comboBox_rows.addItem("")
+        self.comboBox_rows.addItem("")
+        self.comboBox_rows.addItem("")
+        self.comboBox_rows.addItem("")
+        self.comboBox_rows.addItem("")
+        self.comboBox_rows.addItem("")
+        self.gridLayout_10.addWidget(self.comboBox_rows, 1, 1, 1, 1)
+        self.gridLayout_12.addLayout(self.gridLayout_10, 12, 0, 1, 3)
+        self.comboBox_lycee = QtWidgets.QComboBox(self.frame_4)
+        self.comboBox_lycee.setObjectName("comboBox_lycee")
+        self.gridLayout_12.addWidget(self.comboBox_lycee, 7, 0, 1, 3)
+        self.label_19 = QtWidgets.QLabel(self.frame_4)
+        self.label_19.setObjectName("label_19")
+        self.gridLayout_12.addWidget(self.label_19, 10, 0, 1, 1)
+        spacerItem5 = QtWidgets.QSpacerItem(975, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_12.addItem(spacerItem5, 14, 0, 1, 1)
+        spacerItem6 = QtWidgets.QSpacerItem(1066, 275, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_12.addItem(spacerItem6, 13, 0, 1, 2)
+        self.comboBox_dp = QtWidgets.QComboBox(self.frame_4)
+        self.comboBox_dp.setObjectName("comboBox_dp")
+        self.gridLayout_12.addWidget(self.comboBox_dp, 3, 0, 1, 3)
+        self.comboBox_salle = QtWidgets.QComboBox(self.frame_4)
+        self.comboBox_salle.setStyleSheet("")
+        self.comboBox_salle.setObjectName("comboBox_salle")
+        self.gridLayout_12.addWidget(self.comboBox_salle, 9, 0, 1, 3)
+        self.comboBox_aref = QtWidgets.QComboBox(self.frame_4)
+        self.comboBox_aref.setObjectName("comboBox_aref")
+        self.gridLayout_12.addWidget(self.comboBox_aref, 1, 0, 1, 3)
         self.label = QtWidgets.QLabel(self.frame_4)
         self.label.setStyleSheet("QLabel\n"
 "{\n"
 "    padding-top:10px;\n"
 "}")
         self.label.setObjectName("label")
-        self.gridLayout_10.addWidget(self.label, 0, 0, 1, 1)
-        self.lineEdit_lycee = QtWidgets.QLineEdit(self.frame_4)
-        self.lineEdit_lycee.setObjectName("lineEdit_lycee")
-        self.gridLayout_10.addWidget(self.lineEdit_lycee, 7, 0, 1, 2)
-        self.label_16 = QtWidgets.QLabel(self.frame_4)
-        self.label_16.setObjectName("label_16")
-        self.gridLayout_10.addWidget(self.label_16, 6, 0, 1, 1)
-        self.lineEdit_aref = QtWidgets.QLineEdit(self.frame_4)
-        self.lineEdit_aref.setObjectName("lineEdit_aref")
-        self.gridLayout_10.addWidget(self.lineEdit_aref, 1, 0, 1, 2)
+        self.gridLayout_12.addWidget(self.label, 0, 0, 1, 1)
+        self.comboBox_ville = QtWidgets.QComboBox(self.frame_4)
+        self.comboBox_ville.setObjectName("comboBox_ville")
+        self.gridLayout_12.addWidget(self.comboBox_ville, 5, 0, 1, 3)
+        self.label_13 = QtWidgets.QLabel(self.frame_4)
+        self.label_13.setObjectName("label_13")
+        self.gridLayout_12.addWidget(self.label_13, 2, 0, 1, 1)
         self.label_14 = QtWidgets.QLabel(self.frame_4)
         self.label_14.setObjectName("label_14")
-        self.gridLayout_10.addWidget(self.label_14, 4, 0, 1, 1)
-        spacerItem8 = QtWidgets.QSpacerItem(1066, 275, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_10.addItem(spacerItem8, 15, 0, 1, 2)
-        spacerItem9 = QtWidgets.QSpacerItem(975, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_10.addItem(spacerItem9, 16, 0, 1, 1)
-        self.pushButton_enregistrer = QtWidgets.QPushButton(self.frame_4)
-        self.pushButton_enregistrer.setObjectName("pushButton_enregistrer")
-        self.gridLayout_10.addWidget(self.pushButton_enregistrer, 16, 1, 1, 1)
-        self.lineEdit_dp = QtWidgets.QLineEdit(self.frame_4)
-        self.lineEdit_dp.setObjectName("lineEdit_dp")
-        self.gridLayout_10.addWidget(self.lineEdit_dp, 3, 0, 1, 2)
-        self.lineEdit_ville = QtWidgets.QLineEdit(self.frame_4)
-        self.lineEdit_ville.setObjectName("lineEdit_ville")
-        self.gridLayout_10.addWidget(self.lineEdit_ville, 5, 0, 1, 2)
-        self.label_19 = QtWidgets.QLabel(self.frame_4)
-        self.label_19.setObjectName("label_19")
-        self.gridLayout_10.addWidget(self.label_19, 13, 0, 1, 1)
-        self.label_18 = QtWidgets.QLabel(self.frame_4)
-        self.label_18.setObjectName("label_18")
-        self.gridLayout_10.addWidget(self.label_18, 8, 0, 1, 1)
-        self.lineEdit_verificateur = QtWidgets.QLineEdit(self.frame_4)
-        self.lineEdit_verificateur.setObjectName("lineEdit_verificateur")
-        self.gridLayout_10.addWidget(self.lineEdit_verificateur, 9, 0, 1, 2)
-        self.comboBox_salle = QtWidgets.QComboBox(self.frame_4)
-        self.comboBox_salle.setStyleSheet("")
-        self.comboBox_salle.setObjectName("comboBox_salle")
-        self.comboBox_salle.addItem("")
-        self.comboBox_salle.addItem("")
-        self.comboBox_salle.addItem("")
-        self.comboBox_salle.addItem("")
-        self.gridLayout_10.addWidget(self.comboBox_salle, 11, 0, 1, 2)
+        self.gridLayout_12.addWidget(self.label_14, 4, 0, 1, 1)
         self.comboBox_matiere = QtWidgets.QComboBox(self.frame_4)
         self.comboBox_matiere.setObjectName("comboBox_matiere")
-        self.comboBox_matiere.addItem("")
-        self.comboBox_matiere.addItem("")
-        self.comboBox_matiere.addItem("")
-        self.comboBox_matiere.addItem("")
-        self.comboBox_matiere.addItem("")
-        self.gridLayout_10.addWidget(self.comboBox_matiere, 14, 0, 1, 2)
+        self.gridLayout_12.addWidget(self.comboBox_matiere, 11, 0, 1, 3)
+        self.label_16 = QtWidgets.QLabel(self.frame_4)
+        self.label_16.setObjectName("label_16")
+        self.gridLayout_12.addWidget(self.label_16, 6, 0, 1, 1)
+        self.label_17 = QtWidgets.QLabel(self.frame_4)
+        self.label_17.setObjectName("label_17")
+        self.gridLayout_12.addWidget(self.label_17, 8, 0, 1, 1)
+        self.pushButton_enregistrer = QtWidgets.QPushButton(self.frame_4)
+        self.pushButton_enregistrer.setObjectName("pushButton_enregistrer")
+        self.gridLayout_12.addWidget(self.pushButton_enregistrer, 14, 1, 1, 1)
         self.gridLayout_11.addWidget(self.frame_4, 0, 1, 1, 1)
         self.stackedWidget.addWidget(self.page_4)
         self.page_5 = QtWidgets.QWidget()
         self.page_5.setObjectName("page_5")
         self.gridLayout_9 = QtWidgets.QGridLayout(self.page_5)
         self.gridLayout_9.setObjectName("gridLayout_9")
-        self.pushButton_2 = QtWidgets.QPushButton(self.page_5)
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.gridLayout_9.addWidget(self.pushButton_2, 0, 1, 1, 1)
-        self.pushButton = QtWidgets.QPushButton(self.page_5)
-        self.pushButton.setObjectName("pushButton")
-        self.gridLayout_9.addWidget(self.pushButton, 0, 0, 1, 1)
-        spacerItem10 = QtWidgets.QSpacerItem(869, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_9.addItem(spacerItem10, 0, 2, 1, 1)
-        self.frame_3 = QtWidgets.QFrame(self.page_5)
-        self.frame_3.setStyleSheet(".QFrame {\n"
-"    background-color: rgb(40, 40, 40); /* Fond sombre */\n"
-"    color: white; /* Texte en blanc */\n"
-"    font: 14px \"Arial\"; /* Police et taille du texte */\n"
-"    border: 2px solid rgb(80, 80, 80); /* Bordure subtile */\n"
-"    border-radius: 10px; /* Coins arrondis */\n"
-"    padding: 8px; /* Espacement interne pour le texte */\n"
-"}\n"
-"\n"
-"")
-        self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_3.setObjectName("frame_3")
-        self.gridLayout_8 = QtWidgets.QGridLayout(self.frame_3)
-        self.gridLayout_8.setObjectName("gridLayout_8")
-        self.label_28 = QtWidgets.QLabel(self.frame_3)
-        self.label_28.setStyleSheet(".QLabel{\n"
-"    color: white;\n"
-"    font: bold 14px \"Arial\"; /* Police en gras */\n"
-"    padding: 0px;\n"
-"}")
-        self.label_28.setObjectName("label_28")
-        self.gridLayout_8.addWidget(self.label_28, 0, 0, 1, 1)
-        self.label_counter_2 = QtWidgets.QLabel(self.frame_3)
-        self.label_counter_2.setStyleSheet(".QLabel{\n"
-"    color: white;\n"
-"    font: bold 14px \"Arial\"; /* Police en gras */\n"
-"    padding: 0px;\n"
-"}")
-        self.label_counter_2.setObjectName("label_counter_2")
-        self.gridLayout_8.addWidget(self.label_counter_2, 0, 1, 1, 1)
-        spacerItem11 = QtWidgets.QSpacerItem(664, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_8.addItem(spacerItem11, 0, 2, 1, 1)
-        self.tableWidget_gestion = QtWidgets.QTableWidget(self.frame_3)
-        self.tableWidget_gestion.setStyleSheet("/* Style général du QTableWidget */\n"
-"QTableWidget {\n"
-"    background-color: rgb(30, 30, 30); /* Fond sombre */\n"
-"    color: white; /* Texte blanc */\n"
-"    font: 14px \"Arial\"; /* Police moderne */\n"
-"    border: 2px solid rgb(50, 50, 50); /* Bordure légère */\n"
-"    gridline-color: rgb(80, 80, 80); /* Couleur des lignes */\n"
-"   /*  border-radius: 8px; Coins arrondis */\n"
-"}\n"
-"\n"
-"/* En-tête des colonnes */\n"
-"QHeaderView::section {\n"
-"    background-color: rgb(50, 50, 50); /* Fond plus clair pour les en-têtes */\n"
-"    color: white; /* Texte blanc */\n"
-"    font: bold 14px \"Arial\"; /* Police en gras */\n"
-"    padding: 6px;\n"
-"    border: 1px solid rgb(80, 80, 80);\n"
-"\n"
-"}\n"
-"\n"
-"/* Surbrillance des lignes lors du survol */\n"
-"QTableWidget::item:hover {\n"
-"    background-color: rgb(70, 70, 70); /* Gris foncé au survol */\n"
-"}\n"
-"\n"
-"/* Sélection d\'une ligne */\n"
-"QTableWidget::item:selected {\n"
-"    background-color: rgb(0, 150, 255); /* Bleu moderne */\n"
-"    color: white; /* Texte toujours blanc */\n"
-"}\n"
-"\n"
-"/* Ajustement des coins pour l\'en-tête */\n"
-"QTableCornerButton::section {\n"
-"    background-color: rgb(50, 50, 50);\n"
-"    border: 1px solid rgb(80, 80, 80);\n"
-"}\n"
-"\n"
-"\n"
-"")
-        self.tableWidget_gestion.setObjectName("tableWidget_gestion")
-        self.tableWidget_gestion.setColumnCount(2)
-        self.tableWidget_gestion.setRowCount(0)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_gestion.setHorizontalHeaderItem(0, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget_gestion.setHorizontalHeaderItem(1, item)
-        self.gridLayout_8.addWidget(self.tableWidget_gestion, 1, 0, 1, 3)
-        self.gridLayout_9.addWidget(self.frame_3, 1, 0, 1, 3)
+        self.checkBox = QtWidgets.QCheckBox(self.page_5)
+        self.checkBox.setObjectName("checkBox")
+        self.gridLayout_9.addWidget(self.checkBox, 0, 0, 1, 1)
         self.stackedWidget.addWidget(self.page_5)
         self.gridLayout_2.addWidget(self.stackedWidget, 0, 1, 1, 1)
+        self.stackedWidget.raise_()
+        self.menuWidget.raise_()
         self.gridLayout.addWidget(self.main_frame, 1, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -1050,100 +968,80 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label_2.setText(_translate("MainWindow", "Interface principale de supervision"))
-        self.label_3.setText(_translate("MainWindow", "AREF"))
         self.label_aref.setText(_translate("MainWindow", "Rabat- Salé-Zemmour–Zair  "))
         self.label_5.setText(_translate("MainWindow", "Délégation Provinciale"))
         self.label_dp.setText(_translate("MainWindow", "Temara Skhirat "))
-        self.label_8.setText(_translate("MainWindow", "Ville"))
-        self.label_ville.setText(_translate("MainWindow", "Skhirat"))
-        self.label_9.setText(_translate("MainWindow", "Lycée"))
         self.label_lycee.setText(_translate("MainWindow", "Lycée Prince Mly Abdellàh"))
-        self.label_11.setText(_translate("MainWindow", "Salle"))
-        self.label_salle.setText(_translate("MainWindow", "5"))
         self.pushButton_home.setText(_translate("MainWindow", "  Accueil"))
         self.pushButton_config.setText(_translate("MainWindow", "  Configuration"))
         self.pushButton_exit.setText(_translate("MainWindow", "  Se déconnecter"))
-        self.toolButton_general.setText(_translate("MainWindow", "Lancer une analyse générale"))
-        self.toolButton_mobility.setText(_translate("MainWindow", "Lancer une analyse en mobilité"))
-        item = self.tableWidget_m.verticalHeaderItem(0)
-        item.setText(_translate("MainWindow", "1"))
-        item = self.tableWidget_m.verticalHeaderItem(1)
-        item.setText(_translate("MainWindow", "2"))
-        item = self.tableWidget_m.verticalHeaderItem(2)
-        item.setText(_translate("MainWindow", "3"))
-        item = self.tableWidget_m.verticalHeaderItem(3)
-        item.setText(_translate("MainWindow", "4"))
-        item = self.tableWidget_m.verticalHeaderItem(4)
-        item.setText(_translate("MainWindow", "5"))
-        item = self.tableWidget_m.verticalHeaderItem(5)
-        item.setText(_translate("MainWindow", "6"))
-        item = self.tableWidget_m.verticalHeaderItem(6)
-        item.setText(_translate("MainWindow", "7"))
-        item = self.tableWidget_m.verticalHeaderItem(7)
-        item.setText(_translate("MainWindow", "8"))
-        item = self.tableWidget_m.verticalHeaderItem(8)
-        item.setText(_translate("MainWindow", "10"))
-        item = self.tableWidget_m.horizontalHeaderItem(0)
-        item.setText(_translate("MainWindow", "CNE"))
-        item = self.tableWidget_m.horizontalHeaderItem(1)
-        item.setText(_translate("MainWindow", "Date"))
-        item = self.tableWidget_m.horizontalHeaderItem(2)
-        item.setText(_translate("MainWindow", "Status"))
-        item = self.tableWidget_m.horizontalHeaderItem(3)
-        item.setText(_translate("MainWindow", "Operator"))
-        self.label_counter_m_.setText(_translate("MainWindow", "0"))
-        self.label_26.setText(_translate("MainWindow", "Liste d\'annotation"))
-        self.label_15.setText(_translate("MainWindow", "Journal"))
+        self.label_12.setText(_translate("MainWindow", "Matière"))
+        self.label_matiere.setText(_translate("MainWindow", "Physique"))
+        self.label_ville.setText(_translate("MainWindow", "Skhirat"))
+        self.label_salle.setText(_translate("MainWindow", "5"))
+        self.label_3.setText(_translate("MainWindow", "AREF"))
+        self.label_8.setText(_translate("MainWindow", "Ville"))
+        self.label_9.setText(_translate("MainWindow", "Lycée"))
+        self.label_11.setText(_translate("MainWindow", "Salle"))
+        self.toolButton_general.setText(_translate("MainWindow", "3. Lancer une analyse générale"))
+        self.toolButton_test.setText(_translate("MainWindow", "1. Test"))
+        self.toolButton_mobility.setText(_translate("MainWindow", "4. Lancer une analyse en mobilité"))
+        self.toolButton_configuration.setText(_translate("MainWindow", "2. Configuration"))
         self.pushButton_retour_mh.setText(_translate("MainWindow", "Retour"))
         self.label_analyse_en_cours.setText(_translate("MainWindow", "Lancement de l\'analyse individuelle en cours ..."))
-        self.pushButton_annoter_m.setText(_translate("MainWindow", "Annoter"))
+        self.label_mul_m.setText(_translate("MainWindow", "Lancez l’analyse"))
+        self.pushButton_effacer.setText(_translate("MainWindow", "Effacer"))
+        self.pushButton_valider.setText(_translate("MainWindow", "Valider"))
         self.pushButton_stop_m.setText(_translate("MainWindow", "Stop"))
         self.pushButton_lancer_m.setText(_translate("MainWindow", "Lancer"))
-        self.pushButton_envoyer_r_m.setText(_translate("MainWindow", "Exporter"))
-        self.label_27.setText(_translate("MainWindow", "Analyse individuelle"))
-        self.label_mul_m.setText(_translate("MainWindow", "Lancez l’analyse"))
+        self.pushButton_envoyer_r_m.setText(_translate("MainWindow", "Envoyer"))
         self.label_46.setText(_translate("MainWindow", "Avancement de l’analyse générale "))
         self.pushButton_retour_g.setText(_translate("MainWindow", "Retour"))
         self.pushButton_lancer_g.setText(_translate("MainWindow", "Lancer"))
         self.pushButton_enregistrer_g.setText(_translate("MainWindow", "Envoyer"))
         self.label_54.setText(_translate("MainWindow", "Analyse"))
-        self.label_49.setText(_translate("MainWindow", "Nombre de risques détectés par appel GSM"))
-        self.label_53.setText(_translate("MainWindow", "Nombre de risques détectés par appel Vidéo"))
+        self.label_49.setText(_translate("MainWindow", "Nombre d’unités détectées par protocole 1"))
+        self.label_53.setText(_translate("MainWindow", "Nombre d’unités détectées par protocole 3"))
         self.label_ctr_whatsapp_g.setText(_translate("MainWindow", "0"))
         self.label_ctr_gsm_g.setText(_translate("MainWindow", "0"))
-        self.label_52.setText(_translate("MainWindow", "Nombre de risques détectés par appel WhatsApp"))
+        self.label_52.setText(_translate("MainWindow", "Nombre d’unités détectées par protocole 2"))
         self.label_ctr_video_g.setText(_translate("MainWindow", "0"))
         item = self.tableWidget_g.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "Date"))
         item = self.tableWidget_g.horizontalHeaderItem(1)
         item.setText(_translate("MainWindow", "Operateur"))
         item = self.tableWidget_g.horizontalHeaderItem(2)
-        item.setText(_translate("MainWindow", "Type de communication"))
+        item.setText(_translate("MainWindow", "Type de protocole"))
         self.label_counter_g.setText(_translate("MainWindow", "0"))
-        self.label_55.setText(_translate("MainWindow", "Nombre de risques détectés"))
-        self.label_17.setText(_translate("MainWindow", "Salle"))
-        self.label_13.setText(_translate("MainWindow", "Délégation Provinciale"))
-        self.label.setText(_translate("MainWindow", "AREF"))
-        self.label_16.setText(_translate("MainWindow", "Lycée"))
-        self.label_14.setText(_translate("MainWindow", "Ville"))
-        self.pushButton_enregistrer.setText(_translate("MainWindow", "Enregistrer"))
+        self.label_55.setText(_translate("MainWindow", "Nombre d’unités détectées"))
+        self.label_20.setText(_translate("MainWindow", "Colonne"))
+        self.label_21.setText(_translate("MainWindow", "Ligne"))
+        self.comboBox_cols.setItemText(0, _translate("MainWindow", "1"))
+        self.comboBox_cols.setItemText(1, _translate("MainWindow", "2"))
+        self.comboBox_cols.setItemText(2, _translate("MainWindow", "3"))
+        self.comboBox_cols.setItemText(3, _translate("MainWindow", "4"))
+        self.comboBox_cols.setItemText(4, _translate("MainWindow", "5"))
+        self.comboBox_rows.setItemText(0, _translate("MainWindow", "1"))
+        self.comboBox_rows.setItemText(1, _translate("MainWindow", "2"))
+        self.comboBox_rows.setItemText(2, _translate("MainWindow", "3"))
+        self.comboBox_rows.setItemText(3, _translate("MainWindow", "4"))
+        self.comboBox_rows.setItemText(4, _translate("MainWindow", "5"))
+        self.comboBox_rows.setItemText(5, _translate("MainWindow", "6"))
+        self.comboBox_rows.setItemText(6, _translate("MainWindow", "7"))
+        self.comboBox_rows.setItemText(7, _translate("MainWindow", "8"))
+        self.comboBox_rows.setItemText(8, _translate("MainWindow", "9"))
+        self.comboBox_rows.setItemText(9, _translate("MainWindow", "10"))
+        self.comboBox_rows.setItemText(10, _translate("MainWindow", "11"))
+        self.comboBox_rows.setItemText(11, _translate("MainWindow", "12"))
+        self.comboBox_rows.setItemText(12, _translate("MainWindow", "13"))
+        self.comboBox_rows.setItemText(13, _translate("MainWindow", "14"))
+        self.comboBox_rows.setItemText(14, _translate("MainWindow", "15"))
         self.label_19.setText(_translate("MainWindow", "Matière"))
-        self.label_18.setText(_translate("MainWindow", "Verificateur"))
-        self.comboBox_salle.setItemText(0, _translate("MainWindow", "1"))
-        self.comboBox_salle.setItemText(1, _translate("MainWindow", "2"))
-        self.comboBox_salle.setItemText(2, _translate("MainWindow", "3"))
-        self.comboBox_salle.setItemText(3, _translate("MainWindow", "4"))
-        self.comboBox_matiere.setItemText(0, _translate("MainWindow", "Physique"))
-        self.comboBox_matiere.setItemText(1, _translate("MainWindow", "SVT"))
-        self.comboBox_matiere.setItemText(2, _translate("MainWindow", "Math"))
-        self.comboBox_matiere.setItemText(3, _translate("MainWindow", "Philosophie"))
-        self.comboBox_matiere.setItemText(4, _translate("MainWindow", "Anglais"))
-        self.pushButton_2.setText(_translate("MainWindow", "Supprimer"))
-        self.pushButton.setText(_translate("MainWindow", "Ajouter"))
-        self.label_28.setText(_translate("MainWindow", "Liste d\'annotation"))
-        self.label_counter_2.setText(_translate("MainWindow", "0"))
-        item = self.tableWidget_gestion.horizontalHeaderItem(0)
-        item.setText(_translate("MainWindow", "Date"))
-        item = self.tableWidget_gestion.horizontalHeaderItem(1)
-        item.setText(_translate("MainWindow", "Type de risque"))
+        self.label.setText(_translate("MainWindow", "AREF"))
+        self.label_13.setText(_translate("MainWindow", "Délégation Provinciale"))
+        self.label_14.setText(_translate("MainWindow", "Ville"))
+        self.label_16.setText(_translate("MainWindow", "Lycée"))
+        self.label_17.setText(_translate("MainWindow", "Salle"))
+        self.pushButton_enregistrer.setText(_translate("MainWindow", "Enregistrer"))
+        self.checkBox.setText(_translate("MainWindow", "test"))
 from static import resource_rc

@@ -1,7 +1,8 @@
 import sys, os
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtCore import QFile, QTextStream
-from src.login_window import LoginWindow
+
+from src.windows.login import LoginWindow
 
 def setQss(file_path, obj):
     """
@@ -27,5 +28,5 @@ if __name__ == '__main__':
 
     window = LoginWindow()
     window.show()
-
+    
     sys.exit(app.exec_())

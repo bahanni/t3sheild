@@ -1,12 +1,13 @@
-from PyQt5.QtWidgets import QWidget, QMessageBox, QPushButton
+from PyQt5.QtWidgets import (QWidget, QMessageBox, QPushButton, QLineEdit)
 from PyQt5.QtCore import Qt, QPoint, pyqtSlot, QSize
 from PyQt5.QtSvg import QSvgWidget
-from PyQt5.QtGui import QMouseEvent, QIcon, QPixmap
+from PyQt5.QtGui import QMouseEvent, QIcon, QPixmap, QFont
 
 from ui.login_ui import Ui_Form
-from src.main_window import MainWindow
-from src.communication import SocketIOWorker
-from src.http_thread import HttpThread
+from src.windows.control import MainWindow
+from src.utils.communication import SocketIOWorker
+from src.utils.http_thread import HttpThread
+from src.windows.keyboard import KeyboardWindow
 
 class LoginWindow(QWidget):
     def __init__(self):
@@ -24,6 +25,7 @@ class LoginWindow(QWidget):
         # initialize QPushButtons in the login window.
         self.ui.exitBtn.setFocusPolicy(Qt.NoFocus)
         self.ui.loginBtn.setFocusPolicy(Qt.NoFocus)
+        self.ui.keyboard_btn.setFocusPolicy(Qt.NoFocus)
 
         # show login window when start app 
         self.ui.funcWidget.setCurrentIndex(0)
@@ -33,12 +35,73 @@ class LoginWindow(QWidget):
         self.setAttribute(Qt.WA_TranslucentBackground)
 
         # Charger et afficher le loader SVG
-        self.loader = QSvgWidget("static/icon/waiting.svg", self)
+        self.loader = QSvgWidget("./static/icon/waiting.svg", self)
         self.loader.setFixedSize(QSize(90, 90))
         self.center_loader()
         self.loader.hide()
 
+        # Create keyboard button
+        self.keyboard_btn = self.ui.keyboard_btn
+        
+        # Create virtual keyboard
+        self.keyboard = KeyboardWindow(self)
+        
+        # Connect text fields to keyboard focus
+        self.original_focus_in = self.ui.lineEdit.focusInEvent
+        self.ui.lineEdit.focusInEvent = lambda e: self.field_focused(self.ui.lineEdit, e)
+        
+        self.original_focus_in2 = self.ui.lineEdit_2.focusInEvent
+        self.ui.lineEdit_2.focusInEvent = lambda e: self.field_focused(self.ui.lineEdit_2, e)
+        
+        # Initial position, will be updated in showEvent
+        self.keyboard_btn.setGeometry(0, 0, 40, 30)
+        self.ui.keyboard_btn.clicked.connect(self.toggle_keyboard)
+        
         self.refresh_connnection()
+    
+    def showEvent(self, event):
+        """Reposition keyboard button when window is shown"""
+        super().showEvent(event)
+        # Position at bottom right of funcWidget
+        func_width = self.ui.funcWidget.width()
+        func_height = self.ui.funcWidget.height()
+        func_pos = self.ui.funcWidget.pos()
+        
+        # Calculate position (10px margin from right and bottom)
+        btn_x = func_pos.x() + func_width - 40 - 10
+        btn_y = func_pos.y() + func_height - 30 - 10 
+        self.keyboard_btn.setGeometry(btn_x, btn_y, 40, 30)
+    
+    def field_focused(self, field, event):
+        """Handle field focus to show keyboard"""
+        # Call original focus event
+        QLineEdit.focusInEvent(field, event)
+        
+        # Don't show keyboard if it was manually hidden
+        if self.keyboard.manual_hide:
+            return
+        
+        # Set field as keyboard target
+        self.keyboard.target = field
+        
+        # Show keyboard
+        self.keyboard.show()
+
+    @pyqtSlot()
+    def toggle_keyboard(self):
+        """Show or hide the keyboard"""
+
+        print("Show or hide the keyboard")
+        if self.keyboard.isVisible():
+            self.keyboard.hide()
+            self.keyboard.manual_hide = True
+        else:
+            self.keyboard.manual_hide = False
+            self.keyboard.show()
+            # Set focus to username field if no field is focused
+            if not self.ui.lineEdit.hasFocus() and not self.ui.lineEdit_2.hasFocus():
+                self.ui.lineEdit.setFocus()
+                self.keyboard.target = self.ui.lineEdit
     
     def refresh_connnection(self):
         if self.client_thread.sio.connected:
@@ -109,6 +172,8 @@ class LoginWindow(QWidget):
         # check if input username and password.
         if not username and not password:
             self.warning_messagebox("Please input username and password")
+            self.ui.loginBtn.setEnabled(True)
+            self.loader.hide()
             return
         
         url = "http://185.255.131.80:8000/t3shield/api/login"
@@ -123,6 +188,7 @@ class LoginWindow(QWidget):
 
     def on_login_response(self, success, data):
         if success:
+            self.keyboard.hide()  # Hide keyboard before opening main window
             self.main_window = MainWindow(data=data, client_thread=self.client_thread)
             self.main_window.show()
             if self.thread.isRunning():
@@ -144,8 +210,8 @@ class LoginWindow(QWidget):
         """
         # Create QMessageBox
         msgBox = QMessageBox(self)
-        msgBox.setWindowIcon(QIcon("./static/icon/icon.png"))
-        msgBox.setIconPixmap(QPixmap("./static/icon/exclamation-48.ico"))
+        msgBox.setWindowIcon(QIcon("/home/t3-shield/t3-shield/t3shield/static/icon/icon.png"))
+        msgBox.setIconPixmap(QPixmap("/home/t3-shield/t3-shield/t3shield/static/icon/exclamation-48.ico"))
         msgBox.setWindowTitle("Warning")
         msgBox.setText(content)
         
@@ -168,9 +234,8 @@ class LoginWindow(QWidget):
         
         msgBox.exec_()
 
-
-
-
-
-
-
+    def closeEvent(self, event):
+        # Hide keyboard when login window is closed
+        if hasattr(self, 'keyboard') and self.keyboard.isVisible():
+            self.keyboard.hide()
+        super().closeEvent(event)

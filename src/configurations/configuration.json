@@ -1,0 +1,33 @@
+{
+    "AREF": [
+      "Rabat-Sale-Kenitra",
+      "Casablanca-Settat",
+      "Fes-Meknes"
+    ],
+    "DP": [
+      "Rabat",
+      "Sale",
+      "Temara-Skhirat",
+      "Casablanca",
+      "Fes"
+    ],
+    "ville": [
+      "Rabat",
+      "Sale",
+      "Skhirat",
+      "Casablanca",
+      "Fes"
+    ],
+    "Lycee": [
+      "Lycee Mohammed V",
+      "Lycee Les Orangers",
+      "Lycee Hassan 2",
+      "Lycee molay abdellah",
+      "Lycee CNE",
+      "Lycee Al Farabi",
+      "Lycee Ibn Sina"
+    ],
+    "Salle": ["Salle 1", "Salle 2", "Salle 3", "Salle 4", "Salle 5", "Salle 6", "Salle 7", "Salle 8", "Salle 9"],
+    "Matiere": ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+  }
+  

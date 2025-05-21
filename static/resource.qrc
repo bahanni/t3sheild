@@ -1,5 +1,10 @@
 <RCC>
   <qresource prefix="icon">
+    <file>icon/_settings.svg</file>
+    <file>icon/general.svg</file>
+    <file>icon/individual.svg</file>
+    <file>icon/settings.svg</file>
+    <file>icon/test.svg</file>
     <file>icon/blink.svg</file>
     <file>icon/blink.svg</file>
     <file>icon/qr.svg</file>

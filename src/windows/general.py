@@ -3,15 +3,16 @@ from PyQt5.QtGui import QIcon, QPixmap
 
 import requests
 import json
-from src.http_thread import HttpThread
+from src.utils.http_thread import HttpThread
 
 class GeneralAnalyse:
-    def __init__(self, data, client_thread, stacked_widget, pushButton_retour_g, 
+    def __init__(self, dataModel, client_thread, stacked_widget, pushButton_retour_g, 
                  tableWidget_g, label_ctr_gsm_g, progressBar_g, label_counter_g, 
                  pushButton_enregistrer_g, pushButton_lancer_g, loader):
-        self.data = data
+        
+        self.dataModel = dataModel
+        self.data = self.dataModel.get()
         self.json_data = str()
-
         self.loader = loader
         self.client_thread = client_thread
         self.stacked_widget = stacked_widget
@@ -35,6 +36,11 @@ class GeneralAnalyse:
         self.tableWidget_g.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
         self.client_thread.general_analyse_s.connect(self.handle_data)
+
+        self.dataModel.dataChanged.connect(self.on_data_changed)
+
+    def on_data_changed(self, new_data):
+        self.data = new_data
 
     def send_data(self):
         url = "http://185.255.131.80:8000/t3shield/api/send_general_analysis"
@@ -71,6 +77,7 @@ class GeneralAnalyse:
 
     def change_page(self, index):
         self.stacked_widget.setCurrentIndex(index)
+        print("actualiser les donnees test:", self.data)
     
     def start_analyse(self):
         self.pushButton_lancer_g.setDisabled(True)
